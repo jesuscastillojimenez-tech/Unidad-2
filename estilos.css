@@ -1,0 +1,151 @@
+/* 1. Propiedades de Texto y Tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Selector de ID #1: Título Principal */
+#titulo-principal {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/*2. Diseño con Flexbox  */
+
+#contenedor-portafolio {
+    display: flex;
+    /* Activa Flexbox */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas bajen si no caben */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    gap: 30px;
+    /* Espacio entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centrado automático del bloque */
+}
+
+/*3. Modelo de Caja para la Card */
+
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    /* Borde sutil */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    width: 300px;
+    /* Ancho fijo de base */
+    overflow: hidden;
+    /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+
+    /* Flexbox interno para que el contenido se estire uniformemente */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    /* Pequeña animación al pasar el mouse */
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación */
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Selector de Clase #2: Imagen */
+.imagen-proyecto {
+    width: 100%;
+    /* Ocupa todo el ancho de la tarjeta */
+    height: 180px;
+    object-fit: cover;
+    /* Recorta la imagen para que no se deforme */
+    display: block;
+}
+
+/* Selector de Clase #3: Cuerpo de la tarjeta */
+.cuerpo-tarjeta {
+    padding: 20px;
+    /* Relleno interno (Padding) */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Hace que todas las tarjetas tengan la misma altura */
+}
+
+/*Selectores de Etiqueta */
+
+/* Selector de etiqueta 1: Títulos de la pagina */
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Selector de etiqueta 2: Párrafos */
+p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    /* Altura de línea para legibilidad */
+    color: #555;
+    flex-grow: 1;
+}
+
+/* Selector de etiqueta 3: Listas */
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* --- Estilos para Botones y Enlaces --- */
+.acciones-tarjeta {
+    margin-top: auto;
+    /* Empuja los botones al final de la tarjeta */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.boton {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    /* Botones del mismo ancho */
+    transition: background 0.3s;
+}
+
+/* Colores y Fondos */
+.boton-demo {
+    background-color: #3498db;
+    color: white;
+}
+
+.boton-demo:hover {
+    background-color: #2980b9;
+}
+
+.boton-codigo {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.boton-codigo:hover {
+    background-color: #1a252f;
+}
